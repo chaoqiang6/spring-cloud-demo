@@ -1,0 +1,24 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster_name: BJ
+        namespace: f4179794-ab6c-4b19-90dd-373119c4c471
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://userservice
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
+            - Before=2037-01-20T17:42:47.789-07:00[America/Denver]
+
+

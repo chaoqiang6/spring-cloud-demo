@@ -1,0 +1,34 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: userservice
+  datasource:
+    url: jdbc:mysql://101.43.215.185:3306/cloud_user?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster_name: BJ
+        namespace: f4179794-ab6c-4b19-90dd-373119c4c471
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
