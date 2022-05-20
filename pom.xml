@@ -13,6 +13,7 @@
         <module>eureka-server</module>
         <module>feign-api</module>
         <module>gateway</module>
+        <module>rabbitmq-amqp</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -73,6 +74,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 </project>

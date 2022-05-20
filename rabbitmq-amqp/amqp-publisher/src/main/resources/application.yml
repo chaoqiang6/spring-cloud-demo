@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: rb-publisher
+  rabbitmq:
+    host: 101.43.215.185
+    port: 5672
+    username: spring_cloud_demo
+    password: 123456
+    virtual-host: /cloud

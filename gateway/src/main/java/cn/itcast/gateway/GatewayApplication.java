@@ -1,7 +1,7 @@
 package cn.itcast.gateway;
 
 
-import cn.itcast.filter.AuthorizeFilter;
+import cn.itcast.gateway.filter.AuthorizeFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

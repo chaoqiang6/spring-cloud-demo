@@ -14,6 +14,7 @@ spring:
       discovery:
         cluster_name: BJ
         namespace: f4179794-ab6c-4b19-90dd-373119c4c471
+
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -32,3 +33,5 @@ feign:
     config:
       default:
         loggerLevel: FULL
+  sentinel:
+    enabled: true
